@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/fonts/fonts.css">
+    <link rel="icon" href="./assets/images/list-checks.png" type="image/x-icon">
+    <title>To-do List</title>
+</head>
+<body>
+    <div class="first-container">
+        <h1>
+            To-do List
+        </h1>
+        <div class="content--add-item">
+            <!-- input, botão -->
+            <input type="text" id="input-new-task" placeholder="Digite sua nova task:">
+            <input type="date" id="input-date" placeholder="Selecione o dia:">
+            <select name="priority" id="priority">
+                <option value="" disabled selected hidden>Selecione a prioridade:</option>
+                <option value="3">
+                    Baixa
+                </option>
+                <option value="2">
+                    Média
+                </option>
+                <option value="1">
+                    Alta
+                </option>
+            </select>
+            <button onclick="newTask()" id="btn-new-task" title="Adicionar nova task">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-plus"><path d="M11 12H3"/><path d="M16 6H3"/><path d="M16 18H3"/><path d="M18 9v6"/><path d="M21 12h-6"/></svg>
+            </button>
+        </div>
+    </div>
+    <div class="days-container">
+        <div class="content">
+            <div id='container-to-do'>
+                <div id="days">
+                    <span>
+                        Segunda-feira
+                    </span>
+                </div>
+                <hr>
+                <!-- lista -->
+                <ul class="to-do-list" id="Segunda-feira">
+                    <button onclick="editTask()" id="btn-edit" title="Editar task">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+                    </button>
+                    <button id="btn-ok">
+                    </button>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div id='container-to-do'>
+                <div id="days">
+                    <span>
+                        Terça-feira
+                    </span>
+                </div>
+                <hr>
+                <!-- lista -->
+                <ul class="to-do-list" id="Terça-feira">
+                    <button onclick="editTask()" id="btn-edit" title="Editar task">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+                    </button>
+                    <button id="btn-ok">
+                    </button>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div id='container-to-do'>
+                <div id="days">
+                    <span>
+                        Quarta-feira
+                    </span>
+                </div>
+                <hr>
+                <!-- lista -->
+                <ul class="to-do-list" id="Quarta-feira">
+                    <button onclick="editTask()" id="btn-edit" title="Editar task">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+                    </button>
+                    <button id="btn-ok">
+                    </button>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div id='container-to-do'>
+                <div id="days">
+                    <span>
+                        Quinta-feira
+                    </span>
+                </div>
+                <hr>
+                <!-- lista -->
+                <ul class="to-do-list" id="Quinta-feira">
+                    <button onclick="editTask()" id="btn-edit" title="Editar task">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+                    </button>
+                    <button id="btn-ok">
+                    </button>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div id='container-to-do'>
+                <div id="days">
+                    <span>
+                        Sexta-feira
+                    </span>
+                </div>
+                <hr>
+                <!-- lista -->
+                <ul class="to-do-list" id="Sexta-feira">
+                    <button onclick="editTask()" id="btn-edit" title="Editar task">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+                    </button>
+                    <button id="btn-ok">
+                    </button>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div id='container-to-do'>
+                <div id="days">
+                    <span>
+                        Sábado
+                    </span>
+                </div>
+                <hr>
+                <!-- lista -->
+                <ul class="to-do-list" id="Sábado">
+                    <button onclick="editTask()" id="btn-edit" title="Editar task">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+                    </button>
+                    <button id="btn-ok">
+                    </button>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div id='container-to-do'>
+                <div id="days">
+                    <span>
+                        Domingo
+                    </span>
+                </div>
+                <hr>
+                <!-- lista -->
+                <ul class="to-do-list" id="Domingo">
+                    <button onclick="editTask()" id="btn-edit" title="Editar task">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+                    </button>
+                    <button id="btn-ok">
+                    </button>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
